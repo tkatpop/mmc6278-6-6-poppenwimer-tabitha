@@ -19,22 +19,6 @@ function closeMenu(){
     isOpen = false
 }
 
-//Click on icon to open and close menu
-// hamburgerBtn.onclick = 
-// function(e){ 
-
-//     if(launchMenu == true){
-//         closeMenu
-//     } else{
-//         launchMenu        
-//     }
-    // hamburgerMenu.classList.toggle('show-menu')
-
-    // if('show-menu'.visability === "hidden")
-    // {hamburgerBtn.setAttribute('aria-expanded', false)
-    // // hamburgerBtn.focus()}
-    // hamburgerBtn.setAttribute('aria-expanded', true)
-
 //Click Hamburger Button to Toggle Menu
 hamburgerBtn.onclick = function(e) {
     if (isOpen){
@@ -42,22 +26,13 @@ hamburgerBtn.onclick = function(e) {
     } else{
         launchMenu()
     }
-// hamburgerMenu.classList.toggle(function() {
-//     console.log("DUCK");
-//   }, function() {
-//     console.log("GOOSE");
-//   });
-
 }
-
-
 
 //Click event for clicking outside of the navigation to close menu
 document.onclick = function (e){
     if(hamburgerMenu.contains(e.target) || e.target === hamburgerBtn){
     return}
-    closeMenu()
-    
+    closeMenu()   
 }
 
 //Escape key to close menu and tab button to go back to hamburgerbtn on navigation loop
@@ -69,26 +44,3 @@ document.onkeyup = function (e) {
         closeMenu ()
     }
 }
-
-//hamburgerMenu.classList.contains('show-menu') && !hamburgerMenu.contains(document.activeElement)
-// document.body.onclick = function(f) {
-//     if (
-//       hamburgerMenu.contains(e.target) ||
-//       e.target === launchMenu
-//     ) {
-//       return
-//     }
-//     closeMenu()
-// }
-  
-// document.onkeyup = function(g) {
-//     if (
-//       e.key === 'Tab' &&
-//       hamburgerMenu.classList.contains('show-menu') &&
-//       !hamburgerBtn.contains(document.activeElement)
-//     ) {
-//     }
-//     if (e.key === 'Escape')
-//       closeMenu()
-// }
-
